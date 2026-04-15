@@ -1,1 +1,132 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pond Life</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #09111f;
+      color: #f8fafc;
+    }
+    .topbar {
+      background: rgba(9, 17, 31, 0.95);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .topbar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand { color: #67e8f9; font-weight: 700; }
+    .nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      margin-left: 8px;
+      display: inline-block;
+    }
+    .hero {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px 20px;
+      text-align: center;
+    }
+    .hero h1 { margin: 0 0 12px; font-size: 2.7rem; }
+    .hero p { color: #cbd5e1; max-width: 760px; margin: 0 auto; }
+    .section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 20px 70px;
+    }
+    .tile-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .tile {
+      min-height: 260px;
+      border-radius: 22px;
+      text-decoration: none;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+      transition: transform 0.2s ease;
+    }
+    .tile:hover { transform: translateY(-4px); }
+    .tile h2 {
+      position: relative;
+      z-index: 2;
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 500;
+    }
+    .tile p {
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      bottom: 18px;
+      z-index: 2;
+      margin: 0;
+      color: rgba(255,255,255,0.92);
+    }
+    .tile::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(0,0,0,0.18));
+    }
+    .animal { background: linear-gradient(135deg, #5c7f50, #45663e); }
+    .micro { background: linear-gradient(135deg, #7ea0b8, #6f90a8); }
+    @media (max-width: 800px) {
+      .tile-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">Pond Life</div>
+      <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="hero">
+    <h1>Pond Life Section</h1>
+    <p>Choose a topic below to explore pond life in more detail.</p>
+  </section>
+
+  <section class="section">
+    <div class="tile-grid">
+      <a class="tile animal" href="animal.html">
+        <h2>Animal</h2>
+        <p>Larger animal life observed in or around the pond environment.</p>
+      </a>
+
+      <a class="tile micro" href="microscopic-animals.html">
+        <h2>Microscopic Animals</h2>
+        <p>Small living organisms and microscopic animal life found in pond samples.</p>
+      </a>
+    </div>
+  </section>
+</body>
+</html>
