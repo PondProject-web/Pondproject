@@ -1,1 +1,135 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About the Project</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #09111f;
+      color: #f8fafc;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px 70px;
+    }
+    .back {
+      display: inline-block;
+      margin-bottom: 24px;
+      color: #67e8f9;
+      text-decoration: none;
+    }
+    .card {
+      background: #101a2c;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.22);
+    }
+    .header {
+      padding: 22px 24px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    .badge {
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #082f49;
+      background: #67e8f9;
+    }
+    .body {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+    }
+    .main, .side {
+      padding: 24px;
+    }
+    .main {
+      border-right: 1px solid rgba(255,255,255,0.08);
+    }
+    .mini-title {
+      margin: 0 0 12px;
+      color: #67e8f9;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .subcard {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 16px;
+      padding: 16px;
+      margin-top: 14px;
+    }
+    .subcard h3 {
+      margin: 0 0 8px;
+    }
+    .side ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+    .side li { margin-bottom: 10px; }
+    @media (max-width: 800px) {
+      .body { grid-template-columns: 1fr; }
+      .main { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back" href="index.html">← Back to homepage</a>
+
+    <div class="card">
+      <div class="header">
+        <h1>About the Project</h1>
+        <span class="badge">Layer 1</span>
+      </div>
+
+      <div class="body">
+        <div class="main">
+          <p class="mini-title">Main Content</p>
+          <p>
+            This project investigates microorganisms found in pond water. It combines visual observation,
+            bacterial isolation, staining methods, and DNA analysis to better understand how bacteria grow
+            and how different laboratory methods help identify them.
+          </p>
+
+          <div class="subcard">
+            <h3>Project Goal</h3>
+            <p>Study microbial life in pond samples and organize the results into a clear visual website.</p>
+          </div>
+
+          <div class="subcard">
+            <h3>Project Focus</h3>
+            <p>Observation, culturing, identification, and genetic analysis.</p>
+          </div>
+        </div>
+
+        <div class="side">
+          <p class="mini-title">Quick Points</p>
+          <ul>
+            <li>Pond samples were examined from multiple locations.</li>
+            <li>The work focused mainly on bacteria instead of only algae.</li>
+            <li>The final site is designed to explain the full process clearly.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
