@@ -6,7 +6,6 @@
   <title>Pond Project</title>
   <style>
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -122,14 +121,6 @@
       font-size: 0.95rem;
       color: rgba(255,255,255,0.9);
     }
-    .tile::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      opacity: 0.25;
-      background-size: cover;
-      background-position: center;
-    }
     .tile::after {
       content: "";
       position: absolute;
@@ -142,84 +133,6 @@
     .tile-gram { background: linear-gradient(135deg, #7ea0b8, #6f90a8); }
     .tile-dna { background: linear-gradient(135deg, #8478b4, #7367a3); }
     .tile-gel { background: linear-gradient(135deg, #84bfd8, #6ba6bf); }
-
-    .layers {
-      display: grid;
-      gap: 22px;
-    }
-    .layer-card {
-      scroll-margin-top: 90px;
-      background: #101a2c;
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 22px;
-      overflow: hidden;
-      box-shadow: 0 12px 28px rgba(0,0,0,0.22);
-    }
-    .layer-header {
-      padding: 22px 24px;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    .layer-header h3 {
-      margin: 0;
-      font-size: 1.5rem;
-    }
-    .badge {
-      padding: 7px 12px;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: #082f49;
-      background: #67e8f9;
-    }
-    .layer-body {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 0;
-    }
-    .layer-main, .layer-side {
-      padding: 24px;
-    }
-    .layer-main {
-      border-right: 1px solid rgba(255,255,255,0.08);
-    }
-    .mini-title {
-      margin: 0 0 12px;
-      color: #67e8f9;
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-    .subgrid {
-      display: grid;
-      gap: 14px;
-      margin-top: 16px;
-    }
-    .subcard {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 16px;
-      padding: 16px;
-    }
-    .subcard h4 {
-      margin: 0 0 8px;
-      font-size: 1rem;
-      color: #e2e8f0;
-    }
-    .subcard p, .layer-main p, .layer-side p, .layer-side li {
-      margin: 0;
-      color: #cbd5e1;
-    }
-    .layer-side ul {
-      margin: 0;
-      padding-left: 18px;
-      display: grid;
-      gap: 10px;
-    }
     footer {
       text-align: center;
       padding: 28px 20px 50px;
@@ -227,8 +140,6 @@
     }
     @media (max-width: 1000px) {
       .tile-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .layer-body { grid-template-columns: 1fr; }
-      .layer-main { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
     }
     @media (max-width: 640px) {
       .hero h1 { font-size: 2.2rem; }
@@ -243,11 +154,10 @@
     <div class="topbar-inner">
       <div class="brand">Pond Project</div>
       <nav class="nav">
-        <a href="#tiles">Topics</a>
-        <a href="#layers">Layers</a>
-        <a href="#layer-about">About</a>
-        <a href="#layer-culturing">Culturing</a>
-        <a href="#layer-dna">DNA</a>
+        <a href="about.html">About</a>
+        <a href="microscopy.html">Microscopy</a>
+        <a href="culturing.html">Culturing</a>
+        <a href="dna.html">DNA</a>
       </nav>
     </div>
   </div>
@@ -255,253 +165,52 @@
   <section class="hero">
     <h1>Interactive Pond Microorganisms Website</h1>
     <p>
-      This site is built like a visual science library. Each topic is a separate tile, and every tile connects
-      to its own detailed layer below so visitors can move from a clean overview into the full experiment information.
+      This site is built like a visual science library. Each topic is a separate tile, and each tile opens
+      its own page so visitors can move from a clean overview into the full experiment information.
     </p>
   </section>
 
-  <section class="section" id="tiles">
+  <section class="section">
     <h2>Topic Tiles</h2>
     <p class="section-intro">
-      Each box acts like its own connected section. When someone clicks a tile, it jumps to that layer and shows the full content for that topic.
+      Click any section below to open its own page.
     </p>
+
     <div class="tile-grid">
-      <a class="tile tile-about" href="#layer-about">
+      <a class="tile tile-about" href="about.html">
         <h3>About</h3>
         <p>Overview of the pond microorganisms project.</p>
       </a>
-      <a class="tile tile-microscopy" href="#layer-microscopy">
+
+      <a class="tile tile-microscopy" href="microscopy.html">
         <h3>Microscopy</h3>
         <p>Viewing algae, bacteria, and other pond life.</p>
       </a>
-      <a class="tile tile-culturing" href="#layer-culturing">
+
+      <a class="tile tile-culturing" href="culturing.html">
         <h3>Bacteria Culturing</h3>
         <p>Growing bacteria from pond water on plates.</p>
       </a>
-      <a class="tile tile-gram" href="#layer-gram">
+
+      <a class="tile tile-gram" href="gram.html">
         <h3>Gram Staining</h3>
         <p>Classifying bacteria using staining techniques.</p>
       </a>
-      <a class="tile tile-dna" href="#layer-dna">
+
+      <a class="tile tile-dna" href="dna.html">
         <h3>DNA Isolation</h3>
         <p>Extracting bacterial DNA for deeper analysis.</p>
       </a>
-      <a class="tile tile-gel" href="#layer-gel">
+
+      <a class="tile tile-gel" href="gel.html">
         <h3>Gel Electrophoresis</h3>
         <p>Separating DNA fragments by size and charge.</p>
       </a>
     </div>
   </section>
 
-  <section class="section" id="layers">
-    <h2>Connected Layers</h2>
-    <p class="section-intro">
-      These are the detailed layers connected to each tile. You can think of them like separate panels, each with its own content, notes, and experiment details.
-    </p>
-
-    <div class="layers">
-      <article class="layer-card" id="layer-about">
-        <div class="layer-header">
-          <h3>About the Project</h3>
-          <span class="badge">Layer 1</span>
-        </div>
-        <div class="layer-body">
-          <div class="layer-main">
-            <p class="mini-title">Main Content</p>
-            <p>
-              This project investigates microorganisms found in pond water. It combines visual observation,
-              bacterial isolation, staining methods, and DNA analysis to better understand how bacteria grow
-              and how different laboratory methods help identify them.
-            </p>
-            <div class="subgrid">
-              <div class="subcard">
-                <h4>Project Goal</h4>
-                <p>Study microbial life in pond samples and organize the results into a clear visual website.</p>
-              </div>
-              <div class="subcard">
-                <h4>Project Focus</h4>
-                <p>Observation, culturing, identification, and genetic analysis.</p>
-              </div>
-            </div>
-          </div>
-          <aside class="layer-side">
-            <p class="mini-title">Quick Points</p>
-            <ul>
-              <li>Pond samples were examined from multiple locations.</li>
-              <li>The work focused mainly on bacteria instead of only algae.</li>
-              <li>The final site is designed to explain the full process clearly.</li>
-            </ul>
-          </aside>
-        </div>
-      </article>
-
-      <article class="layer-card" id="layer-microscopy">
-        <div class="layer-header">
-          <h3>Microscopy</h3>
-          <span class="badge">Layer 2</span>
-        </div>
-        <div class="layer-body">
-          <div class="layer-main">
-            <p class="mini-title">Main Content</p>
-            <p>
-              Microscopes were used to examine pond water and identify what kinds of microorganisms were present,
-              including algae, bacteria, and other microscopic life. Samples from several ponds were compared to
-              see how visible life differed by source.
-            </p>
-            <div class="subgrid">
-              <div class="subcard">
-                <h4>Why Microscopy Matters</h4>
-                <p>It gives the first visual look at the biodiversity inside the pond water.</p>
-              </div>
-            </div>
-          </div>
-          <aside class="layer-side">
-            <p class="mini-title">Quick Points</p>
-            <ul>
-              <li>Pond 1, 2, and 3 were observed.</li>
-              <li>Some days also included pond 0.</li>
-              <li>Bacteria were hard to track because they were tiny and moved fast.</li>
-            </ul>
-          </aside>
-        </div>
-      </article>
-
-      <article class="layer-card" id="layer-culturing">
-        <div class="layer-header">
-          <h3>Bacteria Culturing</h3>
-          <span class="badge">Layer 3</span>
-        </div>
-        <div class="layer-body">
-          <div class="layer-main">
-            <p class="mini-title">Main Content</p>
-            <p>
-              Bacteria culturing began on April 2. The purpose was to isolate bacteria from pond water and grow
-              colonies that could be studied more easily than free-moving bacteria under a microscope. Agar plates
-              and blood plates were both used.
-            </p>
-            <div class="subgrid">
-              <div class="subcard">
-                <h4>Initial Expectation</h4>
-                <p>Higher temperatures around 30°C were expected to support faster bacterial growth.</p>
-              </div>
-              <div class="subcard">
-                <h4>Follow-Up Plan</h4>
-                <p>Use different temperatures such as 32°C and 28°C to compare bacterial growth patterns.</p>
-              </div>
-            </div>
-          </div>
-          <aside class="layer-side">
-            <p class="mini-title">Quick Points</p>
-            <ul>
-              <li>Agar plates and blood plates were both tested.</li>
-              <li>Bacteria growth on blood plates raised questions.</li>
-              <li>The goal was to isolate single bacteria instead of mixed colonies.</li>
-            </ul>
-          </aside>
-        </div>
-      </article>
-
-      <article class="layer-card" id="layer-gram">
-        <div class="layer-header">
-          <h3>Gram Staining</h3>
-          <span class="badge">Layer 4</span>
-        </div>
-        <div class="layer-body">
-          <div class="layer-main">
-            <p class="mini-title">Main Content</p>
-            <p>
-              Gram staining was scheduled as part of the next phase of the experiment. This method uses multiple dyes
-              to help distinguish bacteria based on cell wall structure, helping classify them as gram-positive or gram-negative.
-            </p>
-            <div class="subgrid">
-              <div class="subcard">
-                <h4>Why It Helps</h4>
-                <p>It provides a clearer way to identify bacteria after culturing them on plates.</p>
-              </div>
-            </div>
-          </div>
-          <aside class="layer-side">
-            <p class="mini-title">Quick Points</p>
-            <ul>
-              <li>Crystal violet, iodine, alcohol, and safranin are used in sequence.</li>
-              <li>The result helps separate bacterial groups visually.</li>
-            </ul>
-          </aside>
-        </div>
-      </article>
-
-      <article class="layer-card" id="layer-dna">
-        <div class="layer-header">
-          <h3>DNA Isolation</h3>
-          <span class="badge">Layer 5</span>
-        </div>
-        <div class="layer-body">
-          <div class="layer-main">
-            <p class="mini-title">Main Content</p>
-            <p>
-              DNA isolation was used to extract genetic material from bacterial cultures. This stage moved the project
-              from visible observation into molecular analysis.
-            </p>
-            <div class="subgrid">
-              <div class="subcard">
-                <h4>Key Steps</h4>
-                <p>Lysis, precipitation, and purification.</p>
-              </div>
-              <div class="subcard">
-                <h4>Purpose</h4>
-                <p>Prepare bacterial DNA for later visualization and analysis.</p>
-              </div>
-            </div>
-          </div>
-          <aside class="layer-side">
-            <p class="mini-title">Quick Points</p>
-            <ul>
-              <li>DNA extraction adds a deeper scientific layer to the project.</li>
-              <li>It supports more advanced biological analysis beyond microscopy.</li>
-            </ul>
-          </aside>
-        </div>
-      </article>
-
-      <article class="layer-card" id="layer-gel">
-        <div class="layer-header">
-          <h3>Agarose Gel Electrophoresis</h3>
-          <span class="badge">Layer 6</span>
-        </div>
-        <div class="layer-body">
-          <div class="layer-main">
-            <p class="mini-title">Main Content</p>
-            <p>
-              Agarose gel electrophoresis is a molecular biology technique used to separate and visualize DNA based on size and charge.
-              DNA moves through an agarose matrix under an electric field, with smaller fragments moving faster.
-            </p>
-            <div class="subgrid">
-              <div class="subcard">
-                <h4>Materials</h4>
-                <p>Agarose gel, ionic buffer, electric current, and fluorescent dyes.</p>
-              </div>
-              <div class="subcard">
-                <h4>Applications</h4>
-                <p>DNA analysis, cloning, PCR verification, and fragment separation.</p>
-              </div>
-            </div>
-          </div>
-          <aside class="layer-side">
-            <p class="mini-title">Quick Points</p>
-            <ul>
-              <li>DNA is negatively charged because of its phosphate backbone.</li>
-              <li>Fragments travel toward the positive electrode.</li>
-              <li>Smaller fragments move more easily through the gel pores.</li>
-            </ul>
-          </aside>
-        </div>
-      </article>
-    </div>
-  </section>
-
   <footer>
-    Pond Project Website • Interactive tile layout with connected layers
+    Pond Project Website
   </footer>
 </body>
 </html>
-
