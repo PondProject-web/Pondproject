@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,111 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Microscopy</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #09111f;
-      color: #f8fafc;
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 40px 20px 70px;
-    }
-    .back {
-      display: inline-block;
-      margin-bottom: 24px;
-      color: #67e8f9;
-      text-decoration: none;
-    }
-    .card {
-      background: #101a2c;
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 22px;
-      overflow: hidden;
-      box-shadow: 0 12px 28px rgba(0,0,0,0.22);
-    }
-    .header {
-      padding: 22px 24px;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    .header h1 { margin: 0; }
-    .badge {
-      padding: 7px 12px;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: #082f49;
-      background: #67e8f9;
-    }
-    .body {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-    }
-    .main, .side { padding: 24px; }
-    .main { border-right: 1px solid rgba(255,255,255,0.08); }
-    .mini-title {
-      margin: 0 0 12px;
-      color: #67e8f9;
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-    .subcard {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 16px;
-      padding: 16px;
-      margin-top: 14px;
-    }
-    .side ul { margin: 0; padding-left: 18px; }
-    .side li { margin-bottom: 10px; }
-    @media (max-width: 800px) {
-      .body { grid-template-columns: 1fr; }
-      .main { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
-    }
+    body { margin:0; font-family: Arial, sans-serif; background:#09111f; color:#f8fafc; line-height:1.7; }
+    .container { max-width: 900px; margin: 0 auto; padding: 40px 20px 70px; }
+    a { color:#67e8f9; text-decoration:none; }
+    .card { margin-top:24px; background:#101a2c; border:1px solid rgba(255,255,255,0.08); border-radius:22px; padding:28px; }
   </style>
 </head>
 <body>
   <div class="container">
-    <a class="back" href="index.html">← Back to homepage</a>
-
+    <a href="bacteria.html">← Back to bacteria</a>
     <div class="card">
-      <div class="header">
-        <h1>Microscopy</h1>
-        <span class="badge">Layer 2</span>
-      </div>
-
-      <div class="body">
-        <div class="main">
-          <p class="mini-title">Main Content</p>
-          <p>
-            Microscopes were used to examine pond water and identify what kinds of microorganisms were present,
-            including algae, bacteria, and other microscopic life. Samples from several ponds were compared to
-            see how visible life differed by source.
-          </p>
-
-          <div class="subcard">
-            <h3>Why Microscopy Matters</h3>
-            <p>It gives the first visual look at the biodiversity inside the pond water.</p>
-          </div>
-        </div>
-
-        <div class="side">
-          <p class="mini-title">Quick Points</p>
-          <ul>
-            <li>Pond 1, 2, and 3 were observed.</li>
-            <li>Some days also included pond 0.</li>
-            <li>Bacteria were hard to track because they were tiny and moved fast.</li>
-          </ul>
-        </div>
-      </div>
+      <h1>Microscopy</h1>
+      <p>Microscopes were used to examine pond water and identify microorganisms, including bacteria and other small life forms.</p>
     </div>
   </div>
 </body>
