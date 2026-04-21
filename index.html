@@ -98,10 +98,8 @@
       padding: 30px;
       position: relative;
       overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.14);
-      background-color: rgba(255, 255, 255, 0.06);
-      box-shadow: 0 12px 35px rgba(0,0,0,0.22);
-      backdrop-filter: blur(3px);
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.16);
       transition: transform 0.2s ease;
     }
 
@@ -109,11 +107,22 @@
       transform: translateY(-4px);
     }
 
+    .tile::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 0;
+    }
+
     .tile::after {
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0.04);
+      background: rgba(0,0,0,0.03);
+      z-index: 1;
     }
 
     .tile h2 {
@@ -125,12 +134,12 @@
       text-shadow: 0 4px 18px rgba(0,0,0,0.35);
     }
 
-    .tile-bacteria {
-      background: url("bacteria2.png.jpeg") center center / cover no-repeat;
+    .tile-bacteria::before {
+      background-image: url("bacteria2.png.jpeg");
     }
 
-    .tile-pondlife {
-      background: url("Pondlife.png") center center / cover no-repeat;
+    .tile-pondlife::before {
+      background-image: url("Pondlife.png");
     }
 
     footer {
